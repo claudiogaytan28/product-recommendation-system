@@ -41,4 +41,4 @@ Python · pandas · mlxtend · scikit-learn · matplotlib · seaborn
 
 ## Notebook
 
-[View full notebook →](./02_product_recommendation_system.ipynb)
+[View full notebook →](https://nbviewer.org/github/claudiogaytan28/product-recommendation-system/blob/main/02_product_recommendation_system.ipynb)
