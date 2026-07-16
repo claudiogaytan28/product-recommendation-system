@@ -1,44 +1,43 @@
-# Product Recommendation System from Retail Transactions
+# Sistema de Recomendación de Productos en Transacciones Retail
 
-A product recommendation system built from retail transaction data using
-market basket analysis, identifying which products are frequently
-purchased together and generating ranked recommendations for any given
-product.
+Sistema de recomendación de productos construido sobre datos de transacciones
+retail usando market basket analysis, identificando qué productos se compran
+frecuentemente juntos y generando recomendaciones ordenadas por relevancia
+para cualquier producto dado.
 
-## Problem
+## Problema
 
-Retailers often miss opportunities to increase basket size by failing to
-suggest relevant products at the right moment. This project answers a
-practical question: **given a product a customer is buying, what other
-products should be recommended to them?**
+Los retailers pierden oportunidades de aumentar el ticket de compra al no
+sugerir productos relevantes en el momento oportuno. Este proyecto responde
+una pregunta práctica: **dado un producto que compra un cliente, ¿qué otros
+productos se le deberían recomendar?**
 
-## Approach
+## Metodología
 
-1. Data cleaning and transaction-level preparation
-2. Exploratory analysis of basket size and product frequency
-3. Market basket analysis using the Apriori algorithm
-4. Association rule mining (support, confidence, lift)
-5. Rule stability validation across multiple random samples
-6. Recommendation function: given a product, return its top related items
+1. Limpieza de datos y preparación a nivel transacción
+2. Análisis exploratorio del tamaño de canasta y frecuencia de productos
+3. Market basket analysis con el algoritmo Apriori
+4. Minería de reglas de asociación (soporte, confianza, lift)
+5. Validación de estabilidad de reglas en múltiples muestras aleatorias
+6. Función de recomendación: dado un producto, retorna los artículos más relacionados
 
-## Key findings
+## Hallazgos principales
 
-- **Limited natural co-purchase structure:** product frequencies are
-  nearly uniform across the catalog (~36,000–37,000 occurrences each), and
-  the strongest association rules found had a lift of only ~1.16 — close to
-  the threshold that indicates no relationship at all.
-- **Patterns are stable, even if weak:** re-running the analysis on 5
-  independent random samples produced largely the same top rules each time,
-  confirming the relationships found are consistent rather than random noise.
-- **Methodology is sound and transferable:** the recommendation function
-  works as designed. In a business setting with genuine co-purchase
-  patterns, this same pipeline would be expected to surface significantly
-  stronger and more actionable recommendations.
+- **Estructura de co-compra limitada:** las frecuencias de productos son casi
+  uniformes en todo el catálogo (~36,000–37,000 ocurrencias cada uno), y las
+  reglas de asociación más fuertes encontradas tuvieron un lift de solo ~1.16 —
+  cercano al umbral que indica ausencia de relación real.
+- **Patrones estables aunque débiles:** repetir el análisis sobre 5 muestras
+  aleatorias independientes produjo en gran medida las mismas reglas, confirmando
+  que las relaciones son consistentes y no producto del azar.
+- **Metodología sólida y transferible:** la función de recomendación funciona
+  correctamente. En un entorno con patrones reales de co-compra, este mismo
+  pipeline generaría recomendaciones significativamente más fuertes y accionables.
 
-## Tools
+## Herramientas
 
 Python · pandas · mlxtend · scikit-learn · matplotlib · seaborn
 
 ## Notebook
 
-[View full notebook →](https://nbviewer.org/github/claudiogaytan28/product-recommendation-system/blob/main/02_product_recommendation_system.ipynb)
+[Ver notebook completo →](https://github.com/claudiogaytan28/product-recommendation-system/blob/main/03_product_recommendation_system.ipynb)
